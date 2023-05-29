@@ -92,6 +92,11 @@ body {
     margin: 16px;
 }
 
+.introduction,
+.payments {
+    background-size: cover;
+}
+
 .intro_left {
     display: flex;
     flex-direction: column;
@@ -232,7 +237,7 @@ body {
     background: none;
     font-size: 36px;
     height: 48px;
-    top: 12px;
+    top: 0;
 }
 
 .p_close>i {
@@ -250,8 +255,9 @@ body {
 .p_qr>img {
     max-height: 256px;
     height: 100%;
+    width: 100%;
     max-width: 256px;
-    object-fit: cover;
+    object-fit: contain;
     aspect-ratio: 1/1;
     margin: 16px;
 }
@@ -263,6 +269,12 @@ body {
 .link>div>form:hover,
 .link>div>div:hover {
     background: rgb(101, 213, 189, 0.6) !important;
+}
+
+.p_title_text {
+    margin-top: 32px;
+    font-size: 36px;
+    text-align: center;
 }
 
 @media (min-width: 992px) {
@@ -278,6 +290,7 @@ body {
     .intro_flex {
         flex-direction: column;
         justify-items: center;
+        align-items: center;
 
     }
 
@@ -309,6 +322,29 @@ body {
 
     .intro_cont>li {
         font-size: 16px;
+    }
+
+    @media (max-height: 768px) and (max-width: 480px) {
+        .payments {
+            height: 100%;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .p_qr>img {
+            max-height: 144px;
+        }
+
+        .p_qr {
+            flex-grow: 1;
+            justify-content: space-around;
+        }
+
+        .p_close {
+            top: 32px;
+        }
     }
 }
 
