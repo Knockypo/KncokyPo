@@ -64,7 +64,7 @@ body {
 }
 
 .main {
-    margin: auto center;
+    margin: auto;
     display: flex;
     max-width: 1280px;
     width: 100%;
@@ -187,6 +187,7 @@ body {
     display: flex;
     align-items: center;
     margin: auto 32px;
+    flex-direction: column;
 }
 
 .lang_switch {
@@ -210,6 +211,8 @@ body {
     backdrop-filter: blur(8px);
     background: rgba(0, 0, 0, 0.4);
     opacity: 0%;
+    overflow: auto;
+    scroll-padding-top: 32px;
 }
 
 .payments {
@@ -252,6 +255,13 @@ body {
     margin: 32px;
 }
 
+.p_frame {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 .p_qr>img {
     max-height: 256px;
     height: 100%;
@@ -277,6 +287,120 @@ body {
     text-align: center;
 }
 
+.intro_win {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 64;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 320ms;
+    -moz-backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0%;
+}
+
+.detail_frame {
+    border-radius: 72px;
+    overflow: hidden;
+}
+
+.detail_intro {
+    position: absolute;
+    min-width: 512px;
+    min-height: 300px;
+    background: url(../img/lemon.png) center repeat !important;
+    background-size: 100% !important;
+    -moz-backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 72px;
+    overflow: hidden;
+
+}
+
+.detail_intro>.detail_frame>.detail {
+    max-height: 496px;
+    overflow: auto;
+    padding: 16px;
+    text-align: center;
+}
+
+.detail>p {
+    width: calc(100% - 16px);
+    margin: auto;
+}
+
+.sona_intro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 64;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 320ms;
+    -moz-backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0%;
+}
+
+
+.sona {
+    position: absolute;
+    height: calc(100% - 32px);
+    width: auto;
+    background: url(../img/lemon.png) center repeat !important;
+    background-size: 100% !important;
+    -moz-backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 72px;
+    overflow: hidden;
+}
+
+.s_frame {
+    overflow: auto;
+    height: 100%;
+    margin: 32px;
+    padding-bottom: 112px;
+}
+
+.s_img {
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+.s_img>img {
+    height: calc(100% - 64px);
+    margin: auto;
+}
+
+.about_title {
+    width: 100%;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detail_intro>.p_title>.p_close,
+.sona>.p_title>.p_close {
+    top: 0;
+}
+
+#about_me {
+    line-height: 36px;
+    padding: 0;
+    margin: 0;
+}
+
 @media (min-width: 992px) {
 
     .link {
@@ -291,7 +415,6 @@ body {
         flex-direction: column;
         justify-items: center;
         align-items: center;
-
     }
 
     .introduction {
@@ -324,22 +447,29 @@ body {
         font-size: 16px;
     }
 
-    @media (max-height: 768px) and (max-width: 480px) {
+    @media (max-height: 768px) and (max-width: 768px) {
         .payments {
             height: 100%;
             margin-top: 16px;
             margin-bottom: 16px;
             display: flex;
             flex-direction: column;
+            box-sizing: border-box;
         }
 
         .p_qr>img {
             max-height: 144px;
+            width: 100%;
+            object-fit: contain;
+            margin: 0;
         }
 
         .p_qr {
             flex-grow: 1;
             justify-content: space-around;
+            overflow: auto;
+            min-height: 360px;
+            height: 100%;
         }
 
         .p_close {
@@ -351,6 +481,7 @@ body {
 @media (max-width: 768px) {
     .p_qr {
         flex-direction: column;
+        flex-grow: 1;
     }
 
     .introduction>* {

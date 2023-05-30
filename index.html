@@ -8,21 +8,75 @@
     <title>明善</title>
     <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 </head>
 
 <body>
+    <div class="sona_intro" id="sona">
+        <div class="sona">
+            <div class="p_title">
+                <p class="p_title_text" id="sona_title">我的设定</p>
+                <button class="p_close" id="s_close"><i class="fas fa-xmark"></i></button>
+            </div>
+            <div class="s_frame">
+                <div class="s_img">
+                    <img src="img/33_sona.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="intro_win" id="intro">
+        <div class="detail_intro">
+            <div class="p_title">
+                <p class="p_title_text">自我介绍</p>
+                <button class="p_close" id="i_close"><i class="fas fa-xmark"></i></button>
+            </div>
+            <div class="detail_frame">
+                <div class="detail">
+                    <div>
+                        我是 明善/餐点🍳<br>
+                        也可称呼33/餐餐<br>
+                        05后 生日 2.8 <br>
+                        我没有雷点 很好交流<br>
+                        QQ：315340334 <br>
+                        <span>
+                            <hr>
+                        </span> <br>
+                        是个画画人！oc浓度中等———orz <br>
+                        也可以一起打游戏！端游或者手游都可以哦^• ^～<br>
+                        （此网站有连接我的steam主页）<br>
+                        混圈网站有写（敲敲）<br>
+                        <span>
+                            <hr>
+                        </span> <br>
+                        关于空间<br>
+                        1.日常发疯/负能/转发 <br>
+                        2.我的绘画成品/截图 <br>
+                        3.还有一些别的XD <br>
+                        <hr> <br>
+                        亲友欢迎！语音直播可
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
     <div class="cnpay" id="pay">
         <div class="payments">
             <div class="p_title">
                 <p class="p_title_text">付款码</p>
                 <button class="p_close" id="p_close"><i class="fas fa-xmark"></i></button>
             </div>
-            <div class="p_qr">
-                <img src="img/wechat_code.jpg" alt="微信支付码">
-                <img src="img/alipay_code.jpg" alt="支付宝支付码">
+            <div class="p_frame">
+                <div class="p_qr">
+                    <img src="img/wechat_code.jpg" alt="微信支付码">
+                    <img src="img/alipay_code.jpg" alt="支付宝支付码">
+                </div>
             </div>
+
         </div>
     </div>
     <h1 class="dwem33">Moonshine</h1>
@@ -39,9 +93,9 @@
                         class=" btn_form">
                         <button class=" btn_link" id="commission"> <i class="fas fa-scroll"></i> 委托</button>
                     </form>
-                    <form action="" class="btn_form">
-                        <button class=" btn_link"> <i class="fab fa-paypal"></i> Paypal</button>
-                    </form>
+                    <div class="btn_form">
+                        <button class=" btn_link"> <i class="fab fa-paypal"></i> Paypal supported</button>
+                    </div>
                     <div class="btn_form">
                         <button class=" btn_link" id="p_show"> <i class="fab fa-alipay"></i> <i
                                 class="fab fa-weixin"></i>
@@ -52,9 +106,19 @@
                     <p>Dwem33superstar@gmail.com</p>
                 </div>
                 <div class="intro_right">
-                    <h3 id="about_me">
-                        关于我
-                    </h3>
+                    <div class="about_title">
+                        <h3 id="about_me">
+                            关于我
+                        </h3>
+                        <div>
+                            <button class="btn_link lang_switch" id="show_intro" onclick=""><i
+                                    class="fas fa-ellipsis"></i></button>
+                            <button class="btn_link lang_switch" id="switch" onclick=""><i
+                                    class="fas fa-language"></i></button>
+                        </div>
+
+                    </div>
+
                     <div class="hr"></div>
                     <ul class="intro_cont">
                         <li id="intro_job">画师</li>
@@ -66,11 +130,12 @@
                     </ul>
                     <div class="gap"></div>
                     <div class="intro_info">
+                        <div class="btn_form" id="s_show">
+                            <button class=" btn_link" id="show_oc"><i class="fas fa-heart"></i> 展示设定</button>
+                        </div>
                         <div class="btn_form">
                             <button class=" btn_link">Discord: Dwem33#9979</button>
                         </div>
-                        <button class="btn_link lang_switch" id="switch" onclick=""><i
-                                class="fas fa-language"></i></button>
                     </div>
 
                 </div>
@@ -117,6 +182,6 @@
 
 </body>
 <script src="js/lang_switch.js"></script>
-<script src="js/payment_window.js"></script>
+<script type="module" src="js/show_window.js"></script>
 
 </html>

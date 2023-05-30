@@ -7,7 +7,9 @@ const introCN = [
     'CN/EN',
     'INFP | She/her',
     '我会创作 Unicorn Wars / DNAxCAT / FNAF / Roblox / TAWOG / PTP /South Park 的作品（我的圈子）',
-    '交友不拒^ ^'
+    '交友不拒^ ^',
+    '我的设定',
+    '<i class="fas fa-heart"></i> 展示设定'
 ];
 const introEN = [
     'Moonshine',
@@ -18,7 +20,9 @@ const introEN = [
     'CN/EN',
     'INFP | She/her',
     'I will create works of Unicorn Wars / DNAxCAT / FNAF / Roblox / TAWOG / PTP / South Park (My circle of friends)',
-    'Welcome to be friends with me.^ ^'
+    'Welcome to be friends with me.^ ^',
+    'My OC',
+    '<i class="fas fa-heart"></i> Show OC'
 ];
 const intro_id = [
     document.getElementById("dwem"),
@@ -29,7 +33,9 @@ const intro_id = [
     document.getElementById("intro_lang"),
     document.getElementById("intro_pers"),
     document.getElementById("intro_hobb"),
-    document.getElementById("intro_note")
+    document.getElementById("intro_note"),
+    document.getElementById("sona_title"),
+    document.getElementById("show_oc")
 ];
 const html_ = document.getElementById("html");
 var langSwitch = document.getElementById("switch");
