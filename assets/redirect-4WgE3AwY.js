@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{c as t,o as r}from"./index-Bse5zxFq.js";const o={name:"Redirect",props:{},data(){return{}},methods:{},created(){}},c={class:"redirect"};function s(a,n,d,p,_,i){return r(),t("div",c)}const l=e(o,[["render",s]]);export{l as default};
